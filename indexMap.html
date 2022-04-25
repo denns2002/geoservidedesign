@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ <head>
+    <meta charset="utf-8">
+    <title>GeoService</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="static/index/css/index.css">
+    <!--Этот CSS для карты выделен отдельно-->
+    <link rel="stylesheet" type="text/css" href="static/index/css/contentmap.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+ </head>
+ <body>
+     <header>
+         <div class="h-logo">
+            <a href="index.html"><img class="h-text" src="static/index/img/header.png" alt=""></a>
+         </div>
+     </header>
+    <nav id="navig">
+        <div class="topnav" id="myTopnav">
+            <a id="menu" href="#" class="b-icon">&#9776;</a>
+            <div class="nav-acc">
+                <a href='#'>ГЛАВНАЯ</a>
+                <a href='#'>КАРТА</a>
+                <a href='#'>УСЛГУИ</a>
+                <a href='#'>КОНТАКТЫ</a>
+                <a href='#'><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+    <content>
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=60.62530517578126%2C56.83777599238421%2C60.66822052001954%2C56.85291442389756&amp;layer=mapnik"></iframe>
+        </iframe>
+    </content>
+    
+    <footer>
+        <div class="f-block">
+            <div class="gs-block">
+                <a href="#" class="logo f-logo">
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <h4>GeoService</h4><br>
+                    <span>для бизнеса</span>
+                </a>
+            </div>
+            <div class="f-nav info" id="f-nav">
+                <ul>
+                    <li><span>навигация:</span></li>
+                    <li><a href='#'>карта</a></li>
+                    <li><a href='#'>услуги</a></li>
+                    <li><a href='#'>личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="info contacts">
+                <ul>
+                    <li><span>контакты:</span></li>
+                    <li><a href='tel:+'><i class="fa-solid fa-square-phone"></i> +7(988)233-23-23</a></li>
+                    <li><a href='tel:+'><i class="fa-solid fa-square-phone"></i> +8(800)555-35-35</a></li>
+                    <li><a href='mailto:'><i class="fa-solid fa-envelope"></i> project.me@urfu.me</a></li>
+                </ul>
+            </div>
+            <div class="urfu">
+                <a href="https://urfu.ru/" target="_blank"><img src="static/index/img/urfu.png" alt="UrFU"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="static/index/js/script.js"></script>
+ </body>
+</html>

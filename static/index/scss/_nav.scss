@@ -1,0 +1,62 @@
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    position: relative;
+    background: $white;
+    z-index: 100;
+}
+
+/* Параметры пунктов меню */
+.topnav {
+    font-size: 14px;
+    margin-top: 20px;
+
+    a {
+        color: $gray;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 15px;
+    
+        &:hover { border-bottom: 2px solid $gray; }
+    }
+
+    /* Иконка бургера */
+    .b-icon {
+        display: none;
+        font-weight: 900;
+        font-size: 1.5em;
+
+        &:hover { border-bottom: none; }
+    }
+}
+
+ /* Мобильное меню*/
+@media screen and (max-width: 768px){
+    nav { height: 60px; }
+
+    .topnav {
+        z-index: 100;
+        position: absolute;
+        flex-direction: column;
+        margin-top: 0px;
+
+        a {
+            display: block;
+            width: 100vw;
+            padding: 14px 20px;
+            background: $white;
+
+            &:hover {
+                color: $white;
+                background: $gray;
+                border-bottom: none;
+                transition: all .1s;
+            }
+        }
+
+        .b-icon { display: block; }
+    }
+}

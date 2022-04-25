@@ -1,0 +1,61 @@
+/* Общие настройки всей верстки */
+
+$d-gray: #3c3c3c;
+$gray: #494949;
+$l-gray: #696969;
+$vl-gray: #919192;
+$opac-gray: #dedede;
+$white: #f2f2f2;
+$s-blue: #9999FF;
+$s-green: #23CE6B;
+$sand: #f8eed1;
+
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('/static/index/img/bg.png');
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}

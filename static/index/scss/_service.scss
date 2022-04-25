@@ -1,0 +1,247 @@
+
+/* Блоки слуг */
+.service {
+    position: relative;
+    margin: 50px;
+    display: inherit;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    color: $white;
+    background: $gray;
+    transition: all .5s;
+    height: min-content;
+
+    .name {
+        display: block;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        font-weight: 900;
+        color: $white;
+        text-shadow: 0 0 3px #fff;
+        background: $d-gray;
+        padding: 10px 0 10px 0;
+        font-size: 40px;
+    }
+
+    .price {
+        color: $s-green;
+        text-shadow: 0 0 3px $s-green;
+        background: linear-gradient($d-gray 75%, $gray);
+        padding: 5px 0 20px 0;
+    }
+    
+    .picture {
+        display: block;
+        width: 350px;
+    }
+
+    .about {
+        padding: 15px;
+        padding-bottom: 0;
+        width: 100%;
+        p {
+            letter-spacing: normal;
+        }
+
+        > p {
+            text-indent: 10px;
+            text-align: center;
+        }
+
+        > span {
+            color: $s-green;
+            margin-left: 5px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .btn-about {
+        display: block;
+        height: 30px;
+        width: 100%;
+        border-radius: 5px;
+        color: $s-green;
+        text-align: center;
+        line-height: 30px;
+        z-index: 20;
+        margin: 5px 0 10px 0;
+
+        i {
+            font-size: 2.5em;
+            animation: bounce 3s infinite;
+            transition: .5s;
+        }
+
+        &:hover {
+            i {
+                color: #fff;
+            }
+        }
+    }
+
+    .dot {
+        color: $s-green;
+        font-weight: 900;
+        text-shadow: 0 0 5px $s-green;
+        margin-left: 5px;
+    }
+
+    .dot,.about {
+        display: inline;
+    }
+
+    .buy {
+        display: block;
+        text-transform: uppercase;
+        color: #fff;
+        background: $s-green;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        margin: 15px 0 20px;
+        padding: 10px;
+        transition: all .2s;
+
+        &:hover {
+            color: $gray;
+            background: #fff;
+        }
+    }
+
+    &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: -5%;
+        width: 100%;
+        height: 110%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+    
+    &::after {
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        border: 2px solid $d-gray;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bronze {
+    &::before {
+        background: linear-gradient(90deg, #CD7F32, #BE7023, #AF6114, #DC8E41, #CD7F32, #BE7023, #AF6114, #DC8E41);
+        background-size: 200% 200%;
+        animation: gradient 10s infinite linear;
+    }
+}
+
+.silver {
+    &::before {
+        background: linear-gradient(90deg, #C0C0C0, #B1B1B1, #A2A2A2, #CFCFCF, #C0C0C0, #B1B1B1, #A2A2A2, #CFCFCF,);
+        background-size: 200% 200%;
+        animation: gradient 10s infinite linear;
+    }
+}
+
+.gold {
+    &::before {
+        background:linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        background-size: 200% 200%;
+        animation: gradient 10s infinite linear;
+    }
+}
+
+.business {
+    .name::after {
+        content: 'бизнес';
+    }
+    .price {
+        color: $s-blue;
+        text-shadow: 0 0 3px $s-blue;
+        &::after {
+            content: '';
+        }
+    }
+
+    &::before {
+        background: linear-gradient(90deg, $s-blue, $s-green);
+    }
+    .btn-about {
+        display: none;
+    }
+    .buy {
+        width: 320px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    #shop {
+        margin-top: 7px;
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        vertical-align: middle;
+        animation: none;
+        background: $s-green;
+        border-radius: 5px;
+        color: $gray;
+
+        &:hover {
+            background: #fff;
+            color: $s-green;
+        }
+    }
+}
+
+@media (max-width: 1430px){
+    .service {
+        margin: 25px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1275px) {
+    .business {
+        max-width: 1200px;
+        flex-direction: row;
+    
+        .name::after {
+            content: 'бизнес тариф';
+        }
+        .price {
+            line-height: 100px;
+            vertical-align: middle;
+            background: linear-gradient(90deg, $d-gray 75%, $gray);
+            &::after {
+                content: '';
+            }
+        }
+        .picture {
+            display: none;
+        }
+    
+        &::before {
+            background: linear-gradient($s-blue, $s-green);
+            left: -2%;
+            top: 0;
+            height: 100%;
+            width: 104%;
+        }
+        .btn-about {
+            display: block;
+        }
+
+        #shop {
+            margin: auto;
+            margin-top: 7px;
+        }
+
+        .buy {
+            display: none;
+            margin: 10px;
+        }
+    }
+}

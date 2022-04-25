@@ -1,0 +1,25 @@
+header {
+    background: $gray;
+    transition: all 1s;
+}
+
+/* Блок с лого */
+.h-logo {
+    position: relative;
+    z-index: 100;
+    background: linear-gradient(90deg, rgba(73,73,73,1) 40%, rgba(123,123,205,1) 70%, rgba(35,206,107,1) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+}
+
+/* img */
+.h-text {
+    transition: all 1s;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 3px 0 5px 0;
+}
+
+        

@@ -1,0 +1,702 @@
+@charset "UTF-8";
+/* Общие настройки всей верстки */
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("/static/index/img/bg.png");
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+header {
+  background: #494949;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+/* Блок с лого */
+.h-logo {
+  position: relative;
+  z-index: 100;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #494949), color-stop(70%, #7b7bcd), to(#23ce6b));
+  background: linear-gradient(90deg, #494949 40%, #7b7bcd 70%, #23ce6b 100%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+/* img */
+.h-text {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3px 0 5px 0;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: #f2f2f2;
+  z-index: 100;
+}
+
+/* Параметры пунктов меню */
+.topnav {
+  font-size: 14px;
+  margin-top: 20px;
+  /* Иконка бургера */
+}
+
+.topnav a {
+  color: #494949;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  border-bottom: 2px solid #494949;
+}
+
+.topnav .b-icon {
+  display: none;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.topnav .b-icon:hover {
+  border-bottom: none;
+}
+
+/* Мобильное меню*/
+@media screen and (max-width: 768px) {
+  nav {
+    height: 60px;
+  }
+  .topnav {
+    z-index: 100;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+  }
+  .topnav a {
+    display: block;
+    width: 100vw;
+    padding: 14px 20px;
+    background: #f2f2f2;
+  }
+  .topnav a:hover {
+    color: #f2f2f2;
+    background: #494949;
+    border-bottom: none;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+  }
+  .topnav .b-icon {
+    display: block;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  height: 185px;
+  background: #494949;
+  text-decoration: none;
+  /* блок контента в футере */
+}
+
+footer .f-block {
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Блок с лого, вк и тг*/
+  /* общие стили для блоков nav и contacts */
+}
+
+footer .f-block ul {
+  list-style: none;
+}
+
+footer .f-block .gs-block {
+  width: 225px;
+}
+
+footer .f-block .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+}
+
+footer .f-block .info span {
+  display: block;
+  margin-bottom: 15px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+footer .f-block .info a {
+  text-decoration: none;
+  color: #696969;
+}
+
+footer .f-block .info a:hover {
+  color: #f2f2f2;
+}
+
+footer .f-block .urfu img {
+  margin: 5px;
+  width: 270px;
+}
+
+/* Блок навигации */
+.f-nav {
+  text-transform: uppercase;
+  min-width: 220px;
+}
+
+.f-nav a {
+  font-size: .9em;
+}
+
+/* Блок контактов */
+.contacts {
+  border-left: 1px solid #919192;
+  min-width: 250px;
+  padding-left: 30px;
+}
+
+/* css для лого в футере */
+.logo {
+  height: 60px;
+  color: #696969;
+  margin: 0;
+  padding: 0;
+}
+
+.logo h4, .logo span {
+  position: absolute;
+  margin-left: 65px;
+  margin-top: 8px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.logo i {
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 25px;
+  font-size: 2.2em;
+}
+
+.logo span {
+  margin-top: 8px;
+  margin-left: 68px;
+  text-transform: uppercase;
+  font-size: .7em;
+}
+
+.logo:hover {
+  color: #696969;
+}
+
+.logo:hover i {
+  color: #9999FF;
+  -webkit-animation: 2s linear 0s normal none running rotate;
+          animation: 2s linear 0s normal none running rotate;
+}
+
+.logo:hover h4 {
+  color: #23CE6B;
+}
+
+.f-logo {
+  color: #f2f2f2;
+  position: static;
+}
+
+.f-logo:hover {
+  color: #f2f2f2;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* Адапатив футера */
+@media (max-width: 1000px) {
+  footer .f-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .urfu {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  /* пришлось дать id блоку nav для большего уточнения*/
+  #f-nav {
+    display: none;
+  }
+}
+
+/* Контект без карты */
+content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+/* Блоки слуг */
+.service {
+  position: relative;
+  margin: 50px;
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+  color: #f2f2f2;
+  background: #494949;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.service .name {
+  display: block;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  color: #f2f2f2;
+  text-shadow: 0 0 3px #fff;
+  background: #3c3c3c;
+  padding: 10px 0 10px 0;
+  font-size: 40px;
+}
+
+.service .price {
+  color: #23CE6B;
+  text-shadow: 0 0 3px #23CE6B;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, #3c3c3c), to(#494949));
+  background: linear-gradient(#3c3c3c 75%, #494949);
+  padding: 5px 0 20px 0;
+}
+
+.service .picture {
+  display: block;
+  width: 350px;
+}
+
+.service .about {
+  padding: 15px;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.service .about p {
+  letter-spacing: normal;
+}
+
+.service .about > p {
+  text-indent: 10px;
+  text-align: center;
+}
+
+.service .about > span {
+  color: #23CE6B;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+
+.service .btn-about {
+  display: block;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  color: #23CE6B;
+  text-align: center;
+  line-height: 30px;
+  z-index: 20;
+  margin: 5px 0 10px 0;
+}
+
+.service .btn-about i {
+  font-size: 2.5em;
+  -webkit-animation: bounce 3s infinite;
+          animation: bounce 3s infinite;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.service .btn-about:hover i {
+  color: #fff;
+}
+
+.service .dot {
+  color: #23CE6B;
+  font-weight: 900;
+  text-shadow: 0 0 5px #23CE6B;
+  margin-left: 5px;
+}
+
+.service .dot, .service .about {
+  display: inline;
+}
+
+.service .buy {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  background: #23CE6B;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 15px 0 20px;
+  padding: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.service .buy:hover {
+  color: #494949;
+  background: #fff;
+}
+
+.service::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: -5%;
+  width: 100%;
+  height: 110%;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.service::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  border: 2px solid #3c3c3c;
+  width: 100%;
+  height: 100%;
+}
+
+.bronze::before {
+  background: -webkit-gradient(linear, left top, right top, from(#CD7F32), color-stop(#BE7023), color-stop(#AF6114), color-stop(#DC8E41), color-stop(#CD7F32), color-stop(#BE7023), color-stop(#AF6114), to(#DC8E41));
+  background: linear-gradient(90deg, #CD7F32, #BE7023, #AF6114, #DC8E41, #CD7F32, #BE7023, #AF6114, #DC8E41);
+  background-size: 200% 200%;
+  -webkit-animation: gradient 10s infinite linear;
+          animation: gradient 10s infinite linear;
+}
+
+.silver::before {
+  background: -webkit-gradient(linear, left top, right top, from(#C0C0C0), color-stop(#B1B1B1), color-stop(#A2A2A2), color-stop(#CFCFCF), color-stop(#C0C0C0), color-stop(#B1B1B1), color-stop(#A2A2A2), to(#CFCFCF));
+  background: linear-gradient(90deg, #C0C0C0, #B1B1B1, #A2A2A2, #CFCFCF, #C0C0C0, #B1B1B1, #A2A2A2, #CFCFCF);
+  background-size: 200% 200%;
+  -webkit-animation: gradient 10s infinite linear;
+          animation: gradient 10s infinite linear;
+}
+
+.gold::before {
+  background: -webkit-gradient(linear, left top, right top, from(#BF953F), color-stop(#FCF6BA), color-stop(#B38728), color-stop(#FBF5B7), to(#AA771C));
+  background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 200% 200%;
+  -webkit-animation: gradient 10s infinite linear;
+          animation: gradient 10s infinite linear;
+}
+
+.business .name::after {
+  content: 'бизнес';
+}
+
+.business .price {
+  color: #9999FF;
+  text-shadow: 0 0 3px #9999FF;
+}
+
+.business .price::after {
+  content: '';
+}
+
+.business::before {
+  background: -webkit-gradient(linear, left top, right top, from(#9999FF), to(#23CE6B));
+  background: linear-gradient(90deg, #9999FF, #23CE6B);
+}
+
+.business .btn-about {
+  display: none;
+}
+
+.business .buy {
+  width: 320px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.business #shop {
+  margin-top: 7px;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  -webkit-animation: none;
+          animation: none;
+  background: #23CE6B;
+  border-radius: 5px;
+  color: #494949;
+}
+
+.business #shop:hover {
+  background: #fff;
+  color: #23CE6B;
+}
+
+@media (max-width: 1430px) {
+  .service {
+    margin: 25px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1275px) {
+  .business {
+    max-width: 1200px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .business .name::after {
+    content: 'бизнес тариф';
+  }
+  .business .price {
+    line-height: 100px;
+    vertical-align: middle;
+    background: -webkit-gradient(linear, left top, right top, color-stop(75%, #3c3c3c), to(#494949));
+    background: linear-gradient(90deg, #3c3c3c 75%, #494949);
+  }
+  .business .price::after {
+    content: '';
+  }
+  .business .picture {
+    display: none;
+  }
+  .business::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9999FF), to(#23CE6B));
+    background: linear-gradient(#9999FF, #23CE6B);
+    left: -2%;
+    top: 0;
+    height: 100%;
+    width: 104%;
+  }
+  .business .btn-about {
+    display: block;
+  }
+  .business #shop {
+    margin: auto;
+    margin-top: 7px;
+  }
+  .business .buy {
+    display: none;
+    margin: 10px;
+  }
+}
+
+content .main {
+  padding-top: 15px;
+  max-width: 950px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+content .main .new-block {
+  margin: 0 0 25px 0;
+  max-width: 850px;
+  width: 100%;
+  background: #dedede;
+  border-radius: 10px 10px;
+  border: 1px solid #494949;
+  overflow: hidden;
+  padding-bottom: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.04) 0px 2px 4px, rgba(0, 0, 0, 0.04) 0px 4px 8px, rgba(0, 0, 0, 0.04) 0px 8px 16px, rgba(0, 0, 0, 0.04) 0px 16px 32px, rgba(0, 0, 0, 0.04) 0px 32px 64px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.04) 0px 2px 4px, rgba(0, 0, 0, 0.04) 0px 4px 8px, rgba(0, 0, 0, 0.04) 0px 8px 16px, rgba(0, 0, 0, 0.04) 0px 16px 32px, rgba(0, 0, 0, 0.04) 0px 32px 64px;
+}
+
+content .main .new-block .head {
+  background: #494949;
+}
+
+content .main .new-block .head h1 {
+  padding: 10px 30px;
+  color: #f2f2f2;
+  display: block;
+  font-size: 25px;
+}
+
+content .main .new-block img {
+  width: 90%;
+  margin: 20px 5%;
+}
+
+content .main .new-block p {
+  padding: 10px 30px 0;
+  letter-spacing: 1px;
+  color: #494949;
+}
+
+content .main .new-block a {
+  padding: 0 30px;
+}
